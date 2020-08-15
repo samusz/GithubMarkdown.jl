@@ -6,7 +6,7 @@
 Render a markdown file (conforming to the [gfm spec](https://github.github.com/gfm/)) to an `IOBuffer` or directly to a file.
 
 
-```
+```julia
 rendergfm(fileout::AbstractString, file::AbstractString; documenter = false, format="html")
 rendergfm(io, file::AbstractString; documenter = false, format="html")
 ```
@@ -18,7 +18,7 @@ Render the markdown document `file` to `fileout` or `io`, following the cmark-gf
 
 You can also use `rendergfm` to work with strings directly:
 
-```
+```julia
 julia> "a **b** c `def` [g](https://julialang.org)" |> rendergfm
 "<p>a <strong>b</strong> c <code>def</code> <a href=\"https://julialang.org\">g</a></p>\n"
 ```
